@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "name": "Blog Posts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Created": {
+      "type": "date",
+      "required": true
+    },
+    "Preview_Text": {
+      "type": "text",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "Highlight": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "Tag1": {
+      "type": "enumeration",
+      "enum": [
+        "Workflows",
+        "Taxes",
+        "Inventory",
+        "Payroll",
+        "Holiday",
+        "Current_Events",
+        "Business_Management",
+        "Compliance",
+        "Bookkeeping"
+      ],
+      "required": true
+    },
+    "Tag2": {
+      "type": "enumeration",
+      "enum": [
+        "Workflows",
+        "Taxes",
+        "Inventory",
+        "Payroll",
+        "Holiday",
+        "Current_Events",
+        "Business_Management",
+        "Compliance",
+        "Bookkeeping"
+      ]
+    },
+    "Tag3": {
+      "type": "enumeration",
+      "enum": [
+        "Workflows",
+        "Taxes",
+        "Inventory",
+        "Payroll",
+        "Holiday",
+        "Current_Events",
+        "Business_Management",
+        "Compliance",
+        "Bookkeeping"
+      ]
+    }
+  }
+}
